@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace RLP
+namespace Ethereum.Encoding
 {
     internal class RLPMessage
     {

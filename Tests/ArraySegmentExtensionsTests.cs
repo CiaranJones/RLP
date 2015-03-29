@@ -1,11 +1,10 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using RLP.Utilities;
 
-namespace RLP.Tests
+namespace Ethereum.Encoding
 {
     [TestClass]
-    internal class ArraySegmentExtensionsTests
+    public class ArraySegmentExtensionsTests
     {
         [TestMethod]
         public void SliceReturnsLast2ItemsWhenStart2AndEnd2()

@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace RLP.Utilities
+namespace Ethereum.Encoding
 {
-    internal static class ArraySegmentExtensions
+    public static class ArraySegmentExtensions
     {
         public static ArraySegment<T> Slice<T>(this ArraySegment<T> source, int start, int? end = null)
         {

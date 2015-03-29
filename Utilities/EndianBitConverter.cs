@@ -5,7 +5,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace RLP.Utilities
+namespace Ethereum.Encoding
 {
     /// <summary>
     /// Equivalent of System.BitConverter, but with either endianness.

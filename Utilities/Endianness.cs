@@ -2,7 +2,7 @@
  * From Jon Skeet's MiscUtil library http://www.yoda.arachsys.com/csharp/miscutil/
  */
 
-namespace RLP.Utilities
+namespace Ethereum.Encoding
 {
     /// <summary>
     /// Endianness of a converter

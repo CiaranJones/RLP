@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>RLP</id>
+    <version>0.2.3</version>
+    <authors>Ciaran Jones</authors>
+    <owners>Ciaran Jones</owners>
+    <licenseUrl>https://github.com/CiaranJones/RLP/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/CiaranJones/RLP</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Recursive Length Prefix (RLP) encoding for .NET</description>
+    <releaseNotes>Updating namespace</releaseNotes>
+    <copyright>Copyright 2015</copyright>
+    <tags>RLP encoding decoding encoder decoder encode decode ethereum</tags>
+    <references>
+      <reference file="Ethereum.Encoding.dll" />      
+    </references>
+  </metadata>
+</package>

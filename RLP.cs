@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using System.Text;
-using RLP.Utilities;
 
-namespace RLP
+namespace Ethereum.Encoding
 {
     public static class RLP
     {
@@ -32,7 +30,7 @@ namespace RLP
 
         public static byte[] Encode(string input)
         {
-            var bytes = Encoding.ASCII.GetBytes(input);
+            var bytes = System.Text.Encoding.ASCII.GetBytes(input);
             var length = bytes.Length;
 
             if (length <= SizeThreshold)
@@ -117,7 +115,7 @@ namespace RLP
                 var itemLength = Math.Abs(128 - firstByte);
                 var data = firstByte == 0x80 ? new ArraySegment<byte>(new byte[0]) : msg.Remainder.Slice(1, itemLength);
 
-                msg.Decoded.Add(Encoding.ASCII.GetString(data.Array, data.Offset, data.Count));
+                msg.Decoded.Add(System.Text.Encoding.ASCII.GetString(data.Array, data.Offset, data.Count));
                 msg.Remainder = msg.Remainder.Slice(data.Count + 1);
                 return;
             }
@@ -129,7 +127,7 @@ namespace RLP
                 var itemLength = Convert.ToInt16(msg.Remainder.Array[msg.Remainder.Offset + 1]);
                 var data = msg.Remainder.Slice(listLength + 1, itemLength);
 
-                msg.Decoded.Add(Encoding.ASCII.GetString(msg.Remainder.Array, data.Offset, data.Count));
+                msg.Decoded.Add(System.Text.Encoding.ASCII.GetString(msg.Remainder.Array, data.Offset, data.Count));
                 msg.Remainder = msg.Remainder.Slice(data.Offset + data.Count);
                 return;
             }

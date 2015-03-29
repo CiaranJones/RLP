@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace RLP.Tests
+namespace Ethereum.Encoding
 {
     [TestClass]
-    internal class RLPTests
+    public class RLPTests
     {
         /// <summary>
         /// Given data to be encoded in RLP
